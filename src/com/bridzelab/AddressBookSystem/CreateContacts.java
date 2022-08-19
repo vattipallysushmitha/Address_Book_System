@@ -10,7 +10,7 @@ public class CreateContacts
 	private String state;
 	private String zip;
 	private String phoneNumber;
-	private String mail;
+	private String mailId;
 	
 	//generating getters and setters
 	public String getFirstName()
@@ -70,10 +70,10 @@ public class CreateContacts
 	}
 	public String getMail()
 	{
-		return mail;
+		return mailId;
 	}
 	public void setMail(String mail) 
 	{
-		this.mail = mail;
+		this.mailId = mail;
 	}
 }

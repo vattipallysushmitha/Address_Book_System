@@ -1,15 +1,14 @@
 package com.bridzelab.AddressBookSystem;
 
-import java.util.ArrayList;
+//importing scanner object
 import java.util.Scanner;
 
 //implementation of address book system
 public class AddressBook 
 {
-	static ArrayList<CreateContacts> contactList = new ArrayList<>();
 
-	//scanner object
-	Scanner sc = new Scanner(System.in);
+	//scanner object for user input
+	static Scanner sc = new Scanner(System.in);
 	
 	//CreateContact object for getters and setters
 	CreateContacts cc = new CreateContacts();
@@ -40,16 +39,13 @@ public class AddressBook
 	public void displayContacts()
 	{
 		System.out.println("=========================================");
-		System.out.println("Displaying Contact Details of Addres Book");
-	    System.out.println("First Name : "+cc.getFirstName());
-	    System.out.println("Last Name : "+cc.getLastName());
-	    System.out.println("Address : "+cc.getAddress());
-	    System.out.println("City : "+cc.getCity());
-	    System.out.println("State : "+cc.getState());
-	    System.out.println("Zip : "+cc.getZip());
-	    System.out.println("PhoneNumber : "+cc.getPhoneNumber());
-	    System.out.println("MailId : "+cc.getMail());
-
+		System.out.println(cc.toString());
 	    
-	}
-}
+
+	    }
+
+
+	        
+
+	    }
+

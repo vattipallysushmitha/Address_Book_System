@@ -12,7 +12,10 @@ public class CreateContacts
 	private String phoneNumber;
 	private String mailId;
 	
-	//generating getters and setters
+	
+	//generating getter and setter methods to the above given fields
+	//setter method():setting the values to the variables
+	//getter method():getting the values from the variables
 	public String getFirstName()
 	{
 		return firstName;
@@ -76,4 +79,13 @@ public class CreateContacts
 	{
 		this.mailId = mail;
 	}
+	@Override
+	public String toString() 
+	{
+		return "CreateContacts [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city="
+				+ city + ", state=" + state + ", zip=" + zip + ", phoneNumber=" + phoneNumber + ", mailId=" + mailId
+				+ "]";
+	}
+	
+	
 }

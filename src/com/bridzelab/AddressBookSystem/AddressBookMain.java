@@ -33,9 +33,9 @@ public class AddressBookMain
 			case 2:
 				ab.displayContacts();
 				System.out.println("sucessfully Displayed the contacts of Address Book");
-
 				break;
 			case 3 :
+				ab.editContact();
 				break;
 			case 4 :
 				System.out.println("Invalid");

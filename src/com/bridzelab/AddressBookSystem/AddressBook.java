@@ -78,11 +78,22 @@ public class AddressBook
 		}
 	}
 		
-		System.out.println("!!!The Name You Entered is miss Match!!!");
 
 	}
-	
-
+	public void deleteContact() 
+	{
+        System.out.println("Enter the First Name!!!!!");
+        String firstName = sc.next();
+        for(int i = 0; i<ccList.size();i++) 
+		{
+        	//shallow copy is a new object whose instance variable are identical to the old object
+        	CreateContacts cc = ccList.get(i);
+        	if(cc.getFirstName().equals(firstName))
+        	{
+			ccList.remove(i);
+        	}
+		}
+	}
 }
 
 

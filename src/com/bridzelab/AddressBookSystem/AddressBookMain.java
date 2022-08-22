@@ -38,7 +38,8 @@ public class AddressBookMain
 				ab.editContact();
 				break;
 			case 4 :
-				System.out.println("Invalid");
+				ab.deleteContact();
+				System.out.println("sucessfully Deleted the contacts of Address Book");
 
 				break;
 			case 5 :

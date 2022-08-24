@@ -36,6 +36,7 @@ public class AddressBookMain
 				break;
 			case 3 :
 				ab.editContact();
+				System.out.println("sucessfully Edited the contacts of Address Book");
 				break;
 			case 4 :
 				ab.deleteContact();

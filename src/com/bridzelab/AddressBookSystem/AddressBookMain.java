@@ -17,45 +17,40 @@ public class AddressBookMain
         	System.out.println("Welcome to Address Book System!!!!!");
         	System.out.println("***********************************");
 
-		while(true) 
-		{
-			System.out.println("select option what you have to enter!!!");
-			System.out.println("===================================");
-			System.out.println("1.AddContact \n2.Display\n3.Edit Contact\n4.Delete\n5.Add multiple Contacts\n6.Exit");
-            int select = ab.sc.nextInt();
-			switch(select)
-			{
-			case 1:
-				ab.addContacts();
-				System.out.println("sucessfully Added the contacts to the Address Book");
+        	int choice; //Variable for user Choice
 
-				break;
-			case 2:
-				ab.displayContacts();
-				System.out.println("sucessfully Displayed the contacts of Address Book");
-				break;
-			case 3 :
-				ab.editContact();
-				System.out.println("sucessfully Edited the contacts of Address Book");
-				break;
-			case 4 :
-				ab.deleteContact();
-				System.out.println("sucessfully Deleted the contacts of Address Book");
+            //Show Menu for user to Select Operation on AddressBook
+            do {
+                System.out.println("***** ADDRESS BOOK MANAGEMENT *****");
+                System.out.println("1. ADD NEW ADDRESSBOOK\n2. EDIT ADDRESSBOOK\n3. DELETE ADDRESSBOOK" +
+                        "\n4. DISPLAY ADDRESSBOOKS\n5. SELECT ADDRESSBOOK\n6. EXIT");
+                System.out.println("Please Select the Operation Number : ");
+                choice = AddressBookMap.userInput();
 
-				break;
-			case 5 :
-				System.out.println("Invalid");
-
-				break;
-			case 6 :
-				System.out.println("Thank You For Adding Contact Details to Address Book ");
-				
-			}
-	}
-
-}
-
-
-	
-		
-	}
+                switch (choice) {
+                    case 1:
+                        AddressBookMap.addNewAddressBook();    //Adding New Address Book to System
+                        break;
+                    case 2:
+                        //Edit Address Book Details
+                        AddressBookMap.editAddressBook();
+                        break;
+                    case 3:
+                        AddressBookMap.deleteAddressBook();    //Delete the Address Book Details
+                        break;
+                    case 4:
+                        AddressBookMap.displayAddressBooks();  //Show Contact Details
+                        break;
+                    case 5:
+                        AddressBookMap.selectAddressBook();
+                        break;
+                    case 6:
+                        System.out.println("Thank You for using Address Book System.");
+                        break;
+                    default:
+                        System.out.println("Please Select the Operation between 1 to 6 only.");
+                        break;
+                }
+            }while( choice != 6 );
+        }
+    }

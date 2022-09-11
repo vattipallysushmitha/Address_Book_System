@@ -1,3 +1,10 @@
+/*Purpose==>Refactor to add multiple Address Book to the System. 
+* 		   -Each Address Book has a unique Name 
+* 		   -Use Console to add new Address Book
+*          -Maintain Dictionary of Address Book Name to Address Book
+*Author==>Sushmitha
+*Sign==>11-10-2022         
+*/
 package com.bridzelab.AddressBookSystem;
 
 import java.util.ArrayList;
@@ -112,6 +119,44 @@ public class AddressBook
             System.out.println("Contact not Found in the Address Book!!!");
         }
     }
+    public void contactOptions(AddressBook addressBook)
+    {
+        int select;
+        
+		//Show Menu for user to Select Operation on AddressBook
+        do 
+        {
+            System.out.println("***** ADDRESS BOOK MANAGEMENT *****");
+            System.out.println("1. ADD NEW CONTACT\n2. EDIT CONTACT\n3. DELETE CONTACT" +
+                    "\n4. DISPLAY CONTACT\n5. EXIT");
+            System.out.println("Please Select the Operation Number : ");
+            select = addressBook.sc.nextInt();
+
+            switch (select) 
+            {
+                case 1:
+                    addressBook.addContacts();    //Adding New Contact Details
+                    break;
+                case 2:
+                    addressBook.editContact();  //Edit Contact Details
+                    break;
+                case 3:
+                    addressBook.deleteContact();    //Delete the Contact Details
+                    break;
+                case 4:
+                    addressBook.displayContacts();   //Show Contact Details
+                    break;
+                case 5:
+                    System.out.println("Thank You for Using Address Book.");
+                    break;
+                default:
+                    System.out.println("Please Select the Operation between 1 to 5 only.");
+                    break;
+            }
+        }
+        while( select != 5 );
+    }
+
 }
 
 
